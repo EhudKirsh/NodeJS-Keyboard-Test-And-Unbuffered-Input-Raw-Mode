@@ -7,7 +7,7 @@ If you wonder how I customised Termux, including the Fetch I made there, I plan 
 
 ### Main
 
-This is a demo for a proposed TUI app for the CLI of AeroFTP 🚀, namely `aeroftp-cli profiles -i`. Hence, this repo on purpose has the same GPL-3.0 license. As such, it displays the same options as it for the user to choose from. I specifically proposed this demo for AeroFTP in its v4 wishlist post here: (Post my wishlist suggestion first, then copy a link to it here).
+This is a demo for a proposed TUI app for the CLI of AeroFTP 🚀, namely `aeroftp-cli profiles -i`. Hence, this repo on purpose has the same GPL-3.0 license. As such, it displays the same options as it for the user to choose from. I specifically proposed this demo for AeroFTP in its v4 wishlist post here: https://github.com/axpdev-lab/aeroftp/discussions/270#discussioncomment-17137604.
 The idea is to improve the speed and comfort of using interactive CLI over the experience that `aeroftp-cli profiles -i`, `rclone config` and others provide. 
 This demo can be used to improve the CLI of more other apps, and such improvements are welcome.
 
