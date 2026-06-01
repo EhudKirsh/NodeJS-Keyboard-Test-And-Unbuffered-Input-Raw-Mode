@@ -1,7 +1,7 @@
 ### Preview
 This is what this demo looks like in Termux (Android). It looks similarly on PC.
 
-<video src="UnbufferedInputRawModeTermux.mp4" controls="controls"></video>
+https://github.com/user-attachments/assets/6d17fd25-c79c-466d-b635-e9a749250571
 
 If you wonder how I customised Termux, including the Fetch I made there, I plan to publish a repo in the future on how I managed this, so stay tuned.
 
