@@ -1,7 +1,10 @@
 ### Preview
-This is what this demo looks like in Termux (Android). It looks similarly on PC.
+This is what this demo looks like in Termux (Android). It looks similar on PC.
 
-https://github.com/user-attachments/assets/6d17fd25-c79c-466d-b635-e9a749250571
+
+
+
+https://github.com/user-attachments/assets/2279ed25-1021-41bf-84b0-eaad196e71a5
 
 If you wonder how I customised Termux, including the Fetch I made there, I plan to publish a repo in the future on how I managed this, so stay tuned.
 
@@ -43,7 +46,7 @@ So what does this demo do? Well, in a nutshell, it allows the user to select an 
 	re-index(#)|List/ls(L)|Tree(T)|Delete(D)|Fav★(F)|Copy(C)|Rename(R)|Edit(E)|Quit(Q/0)
 	```
 
-Below is shown what this demo looks like in PowerShell (Windows) and Termux (Android). This should work wherever NodeJS runs. To run this demo, save it as a file and run in a terminal: `node "Path to where you saved this script/UnbufferedInputRawMode.js`. This is what I call this script, because this is what I understand this concept is technically called. I like to use `$Home` (`C:\Users\<UserName>`) and `/sdcard` (`storage/shared`) shortcuts for paths in PowerShell and Termux as you'll see below. Each option has its own message and function, and I demonstrate List/ls here for the current directory from which this demo runs.
+Below is shown what this demo looks like in PowerShell (Windows) and Termux (Android). This should work wherever NodeJS run, so on other OS as well. To run this demo, save it as a file and run in a terminal: `node "Path to where you saved this script/UnbufferedInputRawMode.js`. This is what I call this script, because this is what I understand this concept is technically called. I like to use `$Home` (`C:\Users\<UserName>`) and `/sdcard` (`storage/shared`) shortcuts for paths in PowerShell and Termux as you'll see below. Each option has its own message and function, and I demonstrate List/ls here for the current directory from which this demo runs.
 
 There is also a KeyboardTest.js file here as well which you can run in the same way, and what it does is it tests the code that NodeJS has for various key presses, including combinations with Shift ⇧, Ctrl and Alt. This is useful if you want to add more keys and combinations to control UnbufferedInputRawMode.js, or for other applications.
 
@@ -91,6 +94,9 @@ const renderMenu=()=>{// Build the visual menu string, calculate line wraps, and
 	for(let i=-1;++i<NumberOfOptions;){
 		const separator=i<NumberOfOptions-1?'|':''
 		output+=(i===selectedIndex?'\x1b[7m':'')+options[i].display+(i===selectedIndex?'\x1b[0m':'')+separator
+			/* The line above highlights focused and selected options in white and shows well only in terminals with dark background colours,
+				so this will need some adjustment to look well in terminals with bright background colours.
+			*/
 		visibleText+=options[i].display+separator
 	}
 	const moveUp=previousLines>0?'\x1b['+previousLines+'A':''
@@ -119,7 +125,7 @@ const renderMenu=()=>{// Build the visual menu string, calculate line wraps, and
 			selectedIndex=(selectedIndex+1)%NumberOfOptions // Cycle forwards
 			renderMenu()
 		break
-		/* These keys don't work if you set them to do certain things in your terminal configuration files like in alacritty.toml and .wezterm.lua.
+		/* These keys don't work if you set them to perform certain actions in your terminal configuration files like in alacritty.toml and .wezterm.lua.
 			I personally set the Page Up and Page Down keys in Alacritty and WezTerm to scroll up and down for example.
 		*/
 		// Use the Keyboard Test script below to find the codes of key presses, including combinations with Shift ⇧, Ctrl and Alt.
@@ -184,9 +190,24 @@ detectKey() /* Enter these in the following OS and terminals to trigger this scr
 */
 ```
 
-### Installing Termux and NodeJS
-You can install Termux from either F-Droid or GitHub - https://termux.dev. Do NOT install Termux from the Google Play Store! Read why here: https://github.com/termux/termux-app/discussions/4000. I like Droid-ify for installing from F-Droid, and Obtainium for installing from GitHub.
+### Installing Apps
 
-To install NodeJS in Termux, enter `pkg install nodejs`. You can install NodeJS in Windows via WinGet by searching for this Package ID: `OpenJS.NodeJS`. I use UniGetUI to install packages via WinGet. You can install UniGetUI from the Microsoft Store. I chose NodeJS because that's the easiest runtime for me to work with, and I wanted something that works in both PowerShell and Termux, so I didn't choose Shell and PowerShell.
+|OS|Windows 💻|Android 📱|
+|-|-|-|
+|Source & Installer Client|WinGet - [UniGetUI](https://apps.microsoft.com/detail/XPFFTQ032PTPHF)|<ul><li>[F-Droid](https://f-droid.org) - [Droid-ify](https://droidify.eu.org)</li><li>GitHub - [Obtainium](https://obtainium.imranr.dev)</li></ul>|
+|>_ Terminals|<ul><li>`Microsoft.PowerShell` (Modern pwsh PowerShell)</li><li>`Alacritty.Alacritty`</li><li>`wez.wezterm`</li></ul>|[Termux](https://termux.dev)|
+|>_ NodeJS|`OpenJS.NodeJS`|`pkg install nodejs`|
+|⌨ Keyboard|N/A|[FUTO](https://futo.tech/projects)|
+|KDE Connect|`KDE.KDEConnect`|[KDE Connect](https://kdeconnect.kde.org)|
 
+You can install Termux from either F-Droid or GitHub. Do NOT install Termux from the Google Play Store! Read why here: https://github.com/termux/termux-app/discussions/4000.
+
+I chose NodeJS because that's the easiest runtime for me to work with, and I wanted something that works in both PowerShell and Termux, so I didn't choose Shell and PowerShell.
+
+I use pwsh inside Alacritty and WezTerm. If you wonder how, I'll publish a repo on this in the future and link it here, so stay tuned for that.
+
+If you're curious how I screen-recorded my phone, it has that option as a quick tile.
+If you wonder how I showed a cursor in the preview, I used KDE Connect. I connected over USB Tethering 🔌 to keep latency low.
 If you're curious how my phone's keyboard had those ∧ ∨ < > keys, I use the FUTO keyboard app.
+
+The code blocks in this table are WinGet Package IDs to search for in UniGetUI/WinGet and a command line to enter in Termux to install.
