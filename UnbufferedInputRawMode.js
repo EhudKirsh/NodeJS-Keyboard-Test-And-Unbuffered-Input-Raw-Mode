@@ -32,6 +32,9 @@ const renderMenu=()=>{// Build the visual menu string, calculate line wraps, and
 	for(let i=-1;++i<NumberOfOptions;){
 		const separator=i<NumberOfOptions-1?'|':''
 		output+=(i===selectedIndex?'\x1b[7m':'')+options[i].display+(i===selectedIndex?'\x1b[0m':'')+separator
+			/* The line above highlights focused and selected options in white and shows well only in terminals with dark background colours,
+				so this will need some adjustment to look well in terminals with bright background colours.
+			*/
 		visibleText+=options[i].display+separator
 	}
 	const moveUp=previousLines>0?'\x1b['+previousLines+'A':''
@@ -60,7 +63,7 @@ const renderMenu=()=>{// Build the visual menu string, calculate line wraps, and
 			selectedIndex=(selectedIndex+1)%NumberOfOptions // Cycle forwards
 			renderMenu()
 		break
-		/* These keys don't work if you set them to do certain things in your terminal configuration files like in alacritty.toml and .wezterm.lua.
+		/* These keys don't work if you set them to perform certain actions in your terminal configuration files like in alacritty.toml and .wezterm.lua.
 			I personally set the Page Up and Page Down keys in Alacritty and WezTerm to scroll up and down for example.
 		*/
 		// Use the Keyboard Test script below to find the codes of key presses, including combinations with Shift ⇧, Ctrl and Alt.
