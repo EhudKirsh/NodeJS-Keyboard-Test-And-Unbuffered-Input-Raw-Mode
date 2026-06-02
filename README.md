@@ -12,25 +12,28 @@ This is what this demo looks like in Termux (Android). It looks similar on PC.
 	</tr>
 </table>
 
-If you wonder how I customised Termux, including the Fetch I made there,
-I plan to publish a repo in the future on how I managed this, so stay tuned.
+If you wonder how I customised Termux, including the Fetch I made there,<br>I plan to publish a repo in the future on how I managed this, so stay tuned.
 
 ### Main
 
-This is a demo for a proposed TUI app for the CLI of AeroFTP 🚀, namely `aeroftp-cli profiles -i`. Hence, this repo on purpose has the same GPL-3.0 license. As such, it displays the same options as it for the user to choose from. I specifically proposed this demo for AeroFTP in its v4 wishlist post here: https://github.com/axpdev-lab/aeroftp/discussions/270#discussioncomment-17137604.
+This is a demo for a proposed TUI app for the CLI of AeroFTP 🚀, namely `aeroftp-cli profiles -i`.<br>Hence, this repo on purpose has the same GPL-3.0 license. As such, it displays the same options as it for the user to choose from.
+<br>I specifically proposed this demo for AeroFTP in its v4 wishlist post here: https://github.com/axpdev-lab/aeroftp/discussions/270#discussioncomment-17137604.
 The idea is to improve the speed and comfort of using interactive CLI over the experience that `aeroftp-cli profiles -i`, `rclone config` and others provide. 
-This demo can be used to improve the CLI of more other apps, and such improvements are welcome.
+<br>This demo can be used to improve the CLI of more other apps, and such improvements are welcome.
 
-So what does this demo do? Well, in a nutshell, it allows the user to select an option out of several in the terminal like Y/N, for example when you're being asked whether you want to install a package in the terminal or not. Although it can be adjusted to show Y|N, it shows an example with significantly more options. This demo is better than many existing CLIs, including those I currently gave as examples. This is because this demo:
+So what does this demo do? Well, in a nutshell, it allows the user to select an option out of several in the terminal like Y/N,
+<br>for example when you're being asked whether you want to install a package in the terminal or not.
+<br>Although it can be adjusted to show Y|N, it shows an example with significantly more options.
+<br>This demo is better than many existing CLIs, including those I currently gave as examples. This is because this demo:
 
 - Prevents wrong characters from being typed.
-- Selects an option as soon as the user typed or pastes a valid character which represents an option, so the user doesn't need to press Enter ↵.
-- Allows cycling through the options with the arrows keys ←↑→↓, Tab ⭾ and Shift ⇧ + Tab ⭾, and the Page Up and Page Down keys, and then press Enter ↵.
-	- The selected option stays highlighted to make it clear that it was selected without needing to print text to confirm this, which helps declutter.
-	- It's possible to press Enter on the first option of # without having to use Shift to type it, though that also works.
+- Selects an option as soon as the user typed or pastes a valid character which represents an option, so the user doesn't need to press Enter.
+- Allows cycling through the options with the arrows keys ←↑→↓, Tab ⭾ and Shift ⇧ + Tab ⭾, and the Page Up and Page Down keys,<br>and then press Enter ↵.
+	- The selected option stays highlighted to make it clear that it was selected without needing to print text to confirm this,<br>which helps declutter.
+	- It's possible to press Enter on the first option of # without having to use Shift to type it,<br>though that also works.
 - This demo was specifically designed to work cross-platform, as the Page Up and Page Down keys on PC send different codes than PGUP and PGDN in Termux.
-	Also, there needed to be a slight adjustment to make sure that there is exactly 1 line break '\n' in each OS when selecting the Quit option which doesn't print a message. So the experience of this Demo in Termux is almost the same as on PC.
-- Saves space by only using 1 or 2 lines in the terminal to display all options without repeating the same word like "remote" which `rclone config` writes. `rclone config` shows each option as a separate row which doesn't help make things clearer, it only wastes space. Here are the options `rclone config` displays:
+	Also, there needed to be a slight adjustment to make sure that there is exactly 1 line break '\n' in each OS when selecting the Quit option which doesn't print a message.<br>So the experience of this Demo in Termux is almost the same as on PC.
+- Saves space by only using 1 or 2 lines in the terminal to display all options without repeating the same word like "remote" which `rclone config` writes. `rclone config` shows each option as a separate row which doesn't help make things clearer, it only wastes space. <br>Here are the options `rclone config` displays:
 
 	```txt
 	e) Edit existing remote
@@ -53,12 +56,14 @@ So what does this demo do? Well, in a nutshell, it allows the user to select an 
 	re-index(#)|List/ls(L)|Tree(T)|Delete(D)|Fav★(F)|Copy(C)|Rename(R)|Edit(E)|Quit(Q/0)
 	```
 
-Below is shown what this demo looks like in PowerShell (Windows) and Termux (Android). This should work wherever NodeJS run, so on other OS as well. To run this demo, save it as a file and run in a terminal: `node "Path to where you saved this script/UnbufferedInputRawMode.js`. This is what I call this script, because this is what I understand this concept is technically called. I like to use `$Home` (`C:\Users\<UserName>`) and `/sdcard` (`storage/shared`) shortcuts for paths in PowerShell and Termux as you'll see below. Each option has its own message and function, and I demonstrate List/ls here for the current directory from which this demo runs.
+Below is shown what this demo looks like in PowerShell (Windows) and Termux (Android). This should work wherever NodeJS run, so on other OS as well. To run this demo, save it as a file and run in a terminal: `node "Path to where you saved this script/UnbufferedInputRawMode.js`. This is what I call this script, because this is what I understand this concept is technically called.
+<br>I like to use `$Home` (`C:\Users\<UserName>`) and `/sdcard` (`storage/shared`) shortcuts for paths in PowerShell and Termux as you'll see below.
+<br>Each option has its own message and function, and I demonstrate List/ls here for the current directory from which this demo runs.
 
 There is also a KeyboardTest.js file here as well which you can run in the same way, and what it does is it tests the code that NodeJS has for various key presses, including combinations with Shift ⇧, Ctrl and Alt. This is useful if you want to add more keys and combinations to control UnbufferedInputRawMode.js, or for other applications.
 
 You can save both scripts as files by copying them or downloading them, as they're also attached.
-Both scripts are entirely self-contained and require no external dependencies to work, not even each other.
+<br>Both scripts are entirely self-contained and require no external dependencies to work, not even each other.
 
 ### Screenshots and Scripts
 
@@ -207,14 +212,17 @@ detectKey() /* Enter these in the following OS and terminals to trigger this scr
 |⌨ Keyboard|N/A|[FUTO](https://futo.tech/projects)|
 |KDE Connect|`KDE.KDEConnect`|[KDE Connect](https://kdeconnect.kde.org)|
 
-You can install Termux from either F-Droid or GitHub. Do NOT install Termux from the Google Play Store! Read why here: https://github.com/termux/termux-app/discussions/4000.
+You can install Termux from either F-Droid or GitHub. Do NOT install Termux from the Google Play Store!
+<br>You can read why in https://github.com/termux/termux-app/discussions/4000.
 
-I chose NodeJS because that's the easiest runtime for me to work with, and I wanted something that works in both PowerShell and Termux, so I didn't choose Shell and PowerShell.
+I chose NodeJS because that's the easiest runtime for me to work with,
+<br>and I wanted something that works in both PowerShell and Termux, so I didn't choose Shell and PowerShell.
 
-I use pwsh inside Alacritty and WezTerm. If you wonder how, I'll publish a repo on this in the future and link it here, so stay tuned for that.
+I use pwsh inside Alacritty and WezTerm.
+<Br>If you wonder how, I'll publish a repo on this in the future and link it here, so stay tuned for that.
 
 If you're curious how I screen-recorded my phone, it has that option as a quick tile.
-If you wonder how I showed a cursor in the preview, I used KDE Connect. I connected over USB Tethering 🔌 to keep latency low.
-If you're curious how my phone's keyboard had those ∧ ∨ < > keys, I use the FUTO keyboard app.
+<br>If you wonder how I showed a cursor in the preview, I used KDE Connect. I connected over USB Tethering 🔌 to keep latency low.
+<br>If you're curious how my phone's keyboard had those ∧ ∨ < > keys, I use the FUTO keyboard app.
 
 The code blocks in this table are WinGet Package IDs to search for in UniGetUI/WinGet and a command line to enter in Termux to install.
