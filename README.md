@@ -1,11 +1,19 @@
 ### Preview
 This is what this demo looks like in Termux (Android). It looks similar on PC.
 
-https://github.com/user-attachments/assets/b0975f91-316f-4eac-9b37-6d2bdc280ffa
+<table>
+	<tr>
+		<td>
+			<video src="https://github.com/user-attachments/assets/b0975f91-316f-4eac-9b37-6d2bdc280ffa"></video>
+		</td>
+		<td>
+			<video src="https://github.com/user-attachments/assets/2279ed25-1021-41bf-84b0-eaad196e71a5"></video>
+		</td>
+	</tr>
+</table>
 
-https://github.com/user-attachments/assets/2279ed25-1021-41bf-84b0-eaad196e71a5
-
-If you wonder how I customised Termux, including the Fetch I made there, I plan to publish a repo in the future on how I managed this, so stay tuned.
+If you wonder how I customised Termux, including the Fetch I made there,
+I plan to publish a repo in the future on how I managed this, so stay tuned.
 
 ### Main
 
