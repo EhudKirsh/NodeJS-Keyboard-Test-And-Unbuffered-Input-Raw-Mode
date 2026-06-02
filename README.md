@@ -1,8 +1,7 @@
 ### Preview
 This is what this demo looks like in Termux (Android). It looks similar on PC.
 
-
-
+https://github.com/user-attachments/assets/b0975f91-316f-4eac-9b37-6d2bdc280ffa
 
 https://github.com/user-attachments/assets/2279ed25-1021-41bf-84b0-eaad196e71a5
 
