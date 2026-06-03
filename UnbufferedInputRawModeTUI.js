@@ -1,7 +1,7 @@
 /* This is a demo of a TUI/CLI app that doesn't let entering any character other than specific ones.
 	Enter these in the following OS and terminals to trigger this script:
-	Windows - PowerShell: node "$Home/Path to where you saved this script/UnbufferedInputRawMode.js"
-	Android - Termux: node "/sdcard/Path to where you saved this script/UnbufferedInputRawMode.js"
+	Windows - PowerShell: node "$Home/Path to where you saved this script/UnbufferedInputRawModeTUI.js"
+	Android - Termux: node "/sdcard/Path to where you saved this script/UnbufferedInputRawModeTUI.js"
 */
 
 'use strict'
