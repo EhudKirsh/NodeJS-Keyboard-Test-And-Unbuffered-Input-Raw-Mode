@@ -48,22 +48,22 @@ So what does this demo do? Well, in a nutshell, it allows the user to select an 
 	re-index(#)|List/ls(L)|Tree(T)|Delete(D)|Fav★(F)|Copy(C)|Rename(R)|Edit(E)|Quit(Q/0)
 	```
 
-Below is shown what this demo looks like in PowerShell (Windows) and Termux (Android). This should work wherever NodeJS run, so on other OS as well. To run this demo, save it as a file and run in a terminal: `node "Path to where you saved this script/UnbufferedInputRawMode.js`. This is what I call this script, because this is what I understand this concept is technically called. I like to use `$Home` (`C:\Users\<UserName>`) and `/sdcard` (`storage/shared`) shortcuts for paths in PowerShell and Termux as you'll see below. Each option has its own message and function, and I demonstrate List/ls here for the current directory from which this demo runs.
+Below is shown what this demo looks like in PowerShell (Windows) and Termux (Android). This should work wherever NodeJS run, so on other OS as well. To run this demo, save it as a file and run in a terminal: `node "Path to where you saved this script/UnbufferedInputRawModeTUI.js`. This is what I call this script, because this is what I understand this concept is technically called. I like to use `$Home` (`C:\Users\<UserName>`) and `/sdcard` (`storage/shared`) shortcuts for paths in PowerShell and Termux as you'll see below. Each option has its own message and function, and I demonstrate List/ls here for the current directory from which this demo runs.
 
 You can save this script as a file by copying it or downloading it, as it's also attached.
 <br>This script is entirely self-contained and requires no external dependencies to work.
 
 ### Screenshots and Scripts
 
-##### UnbufferedInputRawMode.js:
+##### UnbufferedInputRawModeTUI.js:
 
 <img src="UnbufferedInputRawModePowerShell.jpg">
 
 ```js
 /* This is a demo of a TUI/CLI app that doesn't let entering any character other than specific ones.
 	Enter these in the following OS and terminals to trigger this script:
-	Windows - PowerShell: node "$Home/Path to where you saved this script/UnbufferedInputRawMode.js"
-	Android - Termux: node "/sdcard/Path to where you saved this script/UnbufferedInputRawMode.js"
+	Windows - PowerShell: node "$Home/Path to where you saved this script/UnbufferedInputRawModeTUI.js"
+	Android - Termux: node "/sdcard/Path to where you saved this script/UnbufferedInputRawModeTUI.js"
 */
 
 'use strict'
